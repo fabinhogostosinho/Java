@@ -17,7 +17,6 @@ public class Lista18 {
         verificarMaioridade(idade);
 
         // 3 – Boas Vindas
-        sc.nextLine(); // limpar buffer
         System.out.println("Digite seu nome:");
         String nome = sc.nextLine();
         boasVindas(nome);
@@ -28,7 +27,6 @@ public class Lista18 {
         tabuada(tabuadaNum);
 
         // 5 – Juntando palavras
-        sc.nextLine(); // limpar buffer
         System.out.println("Digite a primeira palavra:");
         String p1 = sc.nextLine();
         System.out.println("Digite a segunda palavra:");
