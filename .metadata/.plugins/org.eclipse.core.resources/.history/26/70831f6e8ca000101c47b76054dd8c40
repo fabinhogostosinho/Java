@@ -1,0 +1,37 @@
+package funcaoSimples;
+
+public class Lista18 {
+
+	public static void main(String[] args) {
+		apresentacao();
+		apresentacao();
+		apresentacao();
+		apresentacao();
+		apresentacao();
+		apresentacao();
+		separador();
+		frase();
+		separador();
+		valores();
+	}
+	
+	public static void apresentacao () {
+		System.out.println("Fábio Henrique");
+	}
+	
+	
+	public static void separador () {
+		System.out.println("-------------------------");
+	}
+	
+	public static void frase () {
+		System.out.println("Não deixe para amanhã o que vc pode fazer hj");
+	}
+	public static void valores () {
+			for (int i = 1; i<=10; i++) {
+				System.out.println(i);
+			}
+		}
+		
+		
+}
