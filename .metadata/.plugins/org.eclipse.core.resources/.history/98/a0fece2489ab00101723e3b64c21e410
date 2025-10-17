@@ -1,0 +1,24 @@
+package primeiroProjeto;
+
+public class Retorno {
+
+	public static void main(String[] args) {
+		System.out.println(saudacao("Fábio"));
+		int resultado = numeroFavorito();
+		System.out.println(resultado);
+
+	}
+	public static String saudacao(String nome) {
+		return "Olá " + nome;
+	}
+	public static int numeroFavorito() {
+		return 5;
+	}
+	public static int dobro(int numero) {
+		return numero * 2;
+	}
+	public static double aumento(double salario, double aumento) {
+		double novoSalario = salario + aumento;
+		return novoSalario;
+	}
+}

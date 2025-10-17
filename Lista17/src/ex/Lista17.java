@@ -25,7 +25,7 @@ public class Lista17 {
         System.out.println("Digite os nomes para a tabela 3x2:");
         for (int i = 0; i < 3; i++)
             for (int j = 0; j < 2; j++)
-                nomes[i][j] = sc.next();  // CORRIGIDO: agora lê strings
+                nomes[i][j] = sc.next();
         System.out.println("Tabela de nomes 3x2:");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 2; j++)

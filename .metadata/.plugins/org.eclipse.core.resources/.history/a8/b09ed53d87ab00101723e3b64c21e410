@@ -1,0 +1,60 @@
+package Lista20;
+
+public class Lista20 {
+
+	public static void main(String[] args) {
+		saudacao();
+		saudacao();
+		saudacao();
+		saudacao();
+		saudacao();
+		retangulo();
+		multiplos();
+		contagem();
+		System.out.println("Pronto!");
+		System.out.println("----------------------------");
+		meses();
+
+	}
+	//1 – Repetindo uma saudação
+	public static void saudacao() {
+		System.out.println("Bom dia!");
+	}
+	//2 – Desenhando um retângulo
+	public static void retangulo() {
+		int linhas = 3;
+		int colunas = 5;
+		
+		for(int l=0; l<linhas;l++) {
+		for(int c=0; c<colunas;c++) {
+			System.out.print("* ");
+		}
+		System.out.println();
+		}
+	}
+		//3 – Imprimindo múltiplos de 5
+		public static void multiplos () {
+			for(int i = 1; i<=5; i++) {
+				System.out.println(i*5);
+			}
+			System.out.println("----------------------------");
+		}
+		//4 – Exibindo uma contagem crescente
+			public static void contagem() {
+				for(int i = 1; i<=8; i++) {
+					System.out.println(i);
+				}
+		}
+		//5 – Mostrando os meses do ano
+			public static void meses() {
+				System.out.println("Janeiro");
+				System.out.println("Fevereiro");
+				System.out.println("Março");
+				System.out.println("Abril");
+				System.out.println("Maio");
+				System.out.println("Junho");
+			}
+			}
+
+	
+	

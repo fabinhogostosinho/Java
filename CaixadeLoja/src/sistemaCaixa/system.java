@@ -6,16 +6,16 @@ public class system {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Cadastro de produtos (nomes e estoques)
-        String[] produtos = {"Iphone 13 Pro Max Eclipse 128GB", "Iphone 15 Plus Roxo 512GB", "Ipad Air Preto 10ª Geração", "Iphone 17 Pro Max Laranja 1TB", "Iphone 14 Pro Branco 256GB", "Iphone 16 Rosa 512BG"};
+        String[] produtos = {"Iphone 13 Pro Max Eclipse 128GB", "Iphone 15 Plus Roxo 512GB",
+                             "Ipad Air Preto 10ª Geração", "Iphone 17 Pro Max Laranja 1TB",
+                             "Iphone 14 Pro Branco 256GB", "Iphone 16 Rosa 512GB"};
         int[] estoque = {10, 5, 8, 12, 6, 7};
 
-        // Solicita nome do cliente
         System.out.print("Digite seu nome: ");
         String nome = sc.nextLine();
-        System.out.println("Bem-vindo à Apple, " + nome + "!\n");
+        System.out.println("Bem-vindo à Apple, " + nome);
 
-        // Mostra produtos e estoque
+        // Mostrar produtos
         System.out.println("Produtos disponíveis:");
         System.out.println("1 - " + produtos[0] + " (Estoque: " + estoque[0] + ")");
         System.out.println("2 - " + produtos[1] + " (Estoque: " + estoque[1] + ")");
@@ -24,62 +24,48 @@ public class system {
         System.out.println("5 - " + produtos[4] + " (Estoque: " + estoque[4] + ")");
         System.out.println("6 - " + produtos[5] + " (Estoque: " + estoque[5] + ")");
 
-        // Escolha do produto
-        System.out.print("\nEscolha o número do produto desejado: ");
+        System.out.print("Escolha o número do produto: ");
         int escolha = sc.nextInt();
-        if (escolha < 1 || escolha > 6) {
-            System.out.println("Opção inválida!");
-        } else {
-            String produtoEscolhido = produtos[escolha - 1];
-            int qtdEstoque = estoque[escolha - 1];
 
-            // Quantidade desejada
-            System.out.print("Informe a quantidade desejada: ");
-            int quantidade = sc.nextInt();
-            if (quantidade <= 0) {
-                System.out.println("Valor incorreto, informe pelo menos um produto!");
-            } else if (quantidade > qtdEstoque) {
-                System.out.println("Não temos essa quantidade desse produto, tente outra quantidade!");
-            } else {
-                // Valor do produto
-                System.out.print("Informe o valor unitário do produto R$: ");
-                double valorUnitario = sc.nextDouble();
+        String produtoEscolhido = produtos[escolha - 1];
+        int qtdEstoque = estoque[escolha - 1];
 
-                // Cálculo do total
-                double totalBruto = valorUnitario * quantidade;
-                double desconto = 0;
+        System.out.print("Quantidade desejada: ");
+        int quantidade = sc.nextInt();
 
-                if (totalBruto > 200) {
-                    desconto = 0.15;
-                } else if (totalBruto >= 100) {
-                    desconto = 0.10;
-                } else {
-                    desconto = 0.05;
-                }
-
-                double valorComDesconto = totalBruto - (totalBruto * desconto);
-
-                // Pergunta sobre parcelamento
-                System.out.print("Deseja parcelar? (S/N): ");
-                String resposta = sc.next();
-
-                // Pergunta sobre número de parcelas
-                System.out.print("Quantas parcelas (máximo 5)? ");
-                int parcelas = sc.nextInt();
-                double valorParcela = valorComDesconto / parcelas;
-
-                // Mensagem final
-                System.out.println("\n----- RESUMO DA COMPRA -----");
-                System.out.println("Cliente: " + nome);
-                System.out.println("Produto: " + produtoEscolhido);
-                System.out.println("Quantidade: " + quantidade);
-                System.out.println("Valor original: R$ " + totalBruto);
-                System.out.println("Desconto aplicado: " + (int)(desconto * 100) + "%");
-                System.out.println("Valor com desconto: R$ " + valorComDesconto);
-                System.out.println("Parcelado em " + parcelas + "x de R$ " + valorParcela);
-                System.out.println("-----------------------------");
-                System.out.println("Obrigado pela compra, " + nome + "! Volte sempre!");
-            }
+        if (quantidade <= 0 || quantidade > qtdEstoque) {
+            System.out.println("Quantidade inválida!");
+            return;
         }
+
+        System.out.print("Valor unitário R$: ");
+        double valorUnitario = sc.nextDouble();
+
+        double total = valorUnitario * quantidade;
+        double desconto = total > 200 ? 0.15 : total >= 100 ? 0.10 : 0.05;
+        double valorComDesconto = total - (total * desconto);
+
+        System.out.print("Parcelar? S/N: ");
+        String parcelar = sc.next();
+        int parcelas = 0;
+        double valorParcela = 0;
+
+        if (parcelar.equalsIgnoreCase("S")) {
+            System.out.print("Número de parcelas (máx 5): ");
+            parcelas = sc.nextInt();
+            if (parcelas < 1 || parcelas > 5) parcelas = 0;
+            else valorParcela = valorComDesconto / parcelas;
+        }
+
+        System.out.println("\n----- RESUMO -----");
+        System.out.println("Cliente: " + nome);
+        System.out.println("Produto: " + produtoEscolhido);
+        System.out.println("Quantidade: " + quantidade);
+        System.out.println("Valor original: R$ " + total);
+        System.out.println("Desconto: " + (desconto * 100) + "%");
+        System.out.println("Valor final: R$ " + valorComDesconto);
+
+        if (parcelas > 0) System.out.println("Parcelado: " + parcelas + "x de R$ " + valorParcela);
+        else System.out.println("Pagamento à vista");
     }
 }

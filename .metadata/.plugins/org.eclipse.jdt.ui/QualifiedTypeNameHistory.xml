@@ -2,8 +2,9 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.sun.tools.jdeprscan.scan.Scan"/>
     <fullyQualifiedTypeName name="com.sun.media.sound.SoftLanczosResampler"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="sun.java2d.loops.ScaledBlit"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,41 @@
+package Lista20;
+
+public class Lista20 {
+
+	public static void main(String[] args) {
+		saudacao();
+		saudacao();
+		saudacao();
+		saudacao();
+		saudacao();
+		retangulo();
+		multiplos();
+
+	}
+	//1 – Repetindo uma saudação
+	public static void saudacao() {
+		System.out.println("Bom dia!");
+	}
+	//2 – Desenhando um retângulo
+	public static void retangulo() {
+		int linhas = 3;
+		int colunas = 5;
+		
+		for(int l=0; l<linhas;l++) {
+		for(int c=0; c<colunas;c++) {
+			System.out.print("* ");
+		}
+		System.out.println();
+		}
+	}
+		//3 – Imprimindo múltiplos de 5
+		public static void multiplos () {
+			int num = 0;
+			for(int i = 0; i<=5; i++) {
+				System.out.println(i*5);
+		
+		}
+			
+		}
+	}
+	
