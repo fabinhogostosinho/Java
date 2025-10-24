@@ -1,0 +1,12 @@
+package sistemasTrabalho;
+
+import java.util.Scanner;
+
+public class Telas {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package Poo;
+
+import java.util.Scanner;
+
+public class CachorroP {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		Cachorro dog = new Cachorro();
+		dog.nome = "Bob";
+		dog.idade = 10;
+		dog.latir();
+		
+
+	}
+
+}

@@ -1,0 +1,22 @@
+package ClasseGato;
+
+import java.util.Scanner;
+
+public class GatoP {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Gato gato = new Gato ();
+		
+		gato.miar();
+
+		gato.nome = "Rosado";
+		gato.raca = "SRD";
+		gato.idade = 11;
+		gato.mostrarInformacoes();
+		gato.comer();
+				
+
+	}
+
+}
