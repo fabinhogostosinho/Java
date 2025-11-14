@@ -22,9 +22,9 @@ public class Lista21 {
         linha();
         System.out.println(retangulo(5, 3)); 
         linha();
-        System.out.println(mensagem("Karina")); 
+        System.out.println(mensagem("Fábio")); 
         linha();
-        System.out.println(nomes("Luiza", "Sonza")); 
+        System.out.println(nomes("Fábio", "Souza")); 
         linha();
         System.out.println(idade(22)); 
 	}
