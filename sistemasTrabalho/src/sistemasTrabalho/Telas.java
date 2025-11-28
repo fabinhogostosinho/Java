@@ -54,7 +54,7 @@ public class Telas {
                     String senha = sc.nextLine();
 
                     if (usuario.equals(usuarioCorreto) && senha.equals(senhaCorreta)) {
-                        System.out.println("\nBem-vindo ao EcoRadar, " + usuario + "! 🌿");
+                        System.out.println("\nBem-vindo ao EcoRadar, " + usuario + "!");
                         System.out.println("Login realizado com sucesso!");
                     } else {
                         System.out.println("\nUsuário ou senha incorretos!");
