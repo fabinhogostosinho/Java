@@ -23,7 +23,7 @@ public class Telas {
             switch(opcao) {
             case 1:
                 System.out.println("\n--- INÍCIO ---");
-                System.out.println("Bem-vindo ao EcoRadar! Aqui você encontra informações sobre coleta seletiva e reciclagem. 🌱");
+                System.out.println("Bem-vindo ao EcoRadar! Aqui você encontra informações sobre coleta seletiva e reciclagem.");
                 voltar(sc);
                 break;
                 
@@ -38,7 +38,7 @@ public class Telas {
                 
             case 3:
                 System.out.println("\n--- SOBRE NÓS ---");
-                System.out.println("O EcoRadar é um sistema que conecta cidadãos e pontos de coleta para promover a reciclagem e sustentabilidade. 🌍");
+                System.out.println("O EcoRadar é um sistema que conecta cidadãos e pontos de coleta para promover a reciclagem e sustentabilidade.");
                 voltar(sc);
                 break;
                     
@@ -78,13 +78,13 @@ public class Telas {
                     if (!senha1.equals(confirmaSenha)) {
                         System.out.println("\nAs senhas não coincidem! Tente novamente.");
                     } else {
-                        System.out.println("\nRegistro realizado com sucesso, " + nome + "! 🌿");
+                        System.out.println("\nRegistro realizado com sucesso, " + nome + "!");
                         System.out.println("Usuário criado: " + usuario1);
                     }
                     break;
                     
                 case 0:
-                    System.out.println("Saindo do EcoRadar... até mais! 💚");
+                    System.out.println("Saindo do EcoRadar... até mais!");
                     break;
                 default:
                     System.out.println("Opção inválida! Tente novamente.");
